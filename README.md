@@ -1,2 +1,2 @@
 # honzik-a-danik
-Toto je hra
+Toto je naše hra honzik má hru o modré laguně a já mám hru o lese a městě
