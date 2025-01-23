@@ -1,0 +1,15 @@
+def hlavni():
+    body = 0
+    while True:
+        print(f"\nMáte {body} bodů.")
+        print("1. Přejít do lesa.\n2. Zkusit štěstí v horách.\n3. Podívat se do vesnice.\n4. Vstoupit do tajemné jeskyně.\n5. Konec hry.")
+        volba = input("Vyberte číslo (1-5): ")
+        if volba == "1": body += 10; print("Les: našli jste bobule!")
+        elif volba == "2": body += 50; print("Hory: našli jste poklad!")
+        elif volba == "3": body += 20; print("Vesnice: dostali jste cennosti!")
+        elif volba == "4": body += 30; print("Jeskyně: našli jste artefakt!")
+        elif volba == "5": print(f"Konec hry. Vaše skóre: {body} bodů."); break
+        else: print("Neplatná volba, zkuste to znovu.")
+
+if __name__ == "__hlavni__":
+    hlavni()
