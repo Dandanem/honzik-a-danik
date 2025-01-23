@@ -1,15 +1,34 @@
 def hlavni():
     body = 0
-    while True:
-        print(f"\nMáte {body} bodů.")
-        print("1. Přejít do lesa.\n2. Zkusit štěstí v horách.\n3. Podívat se do vesnice.\n4. Vstoupit do tajemné jeskyně.\n5. Konec hry.")
-        volba = input("Vyberte číslo (1-5): ")
-        if volba == "1": body += 10; print("Les: našli jste bobule!")
-        elif volba == "2": body += 50; print("Hory: našli jste poklad!")
-        elif volba == "3": body += 20; print("Vesnice: dostali jste cennosti!")
-        elif volba == "4": body += 30; print("Jeskyně: našli jste artefakt!")
-        elif volba == "5": print(f"Konec hry. Vaše skóre: {body} bodů."); break
-        else: print("Neplatná volba, zkuste to znovu.")
+    print("Vítejte ve hře! Začněme dobrodružství.")
 
-if __name__ == "__hlavni__":
+    while True:
+        print("\nKde se chcete vydat?")
+        print("1. Přejít do lesa.")
+        print("2. Navštívit město.")
+        print("3. Ukončit hru.")
+
+        volba = input("Vyberte číslo (1-3): ")
+
+        if volba == "1":
+            print("\nLes: Našli jste bobule! Získáváte 10 bodů.")
+            body += 10
+        elif volba == "2":
+            print("\nMěsto: Potkali jste obchodníka, který vám dal úkol.")
+            print("- Úkol: Najít ztracený amulet v lese.")
+            volba_ukol = input("Chcete přijmout úkol? (ano/ne): ")
+            if volba_ukol.lower() == "ano":
+                print("\nVydali jste se hledat amulet a našli ho! Získáváte 20 bodů.")
+                body += 20
+            else:
+                print("\nRozhodli jste se odmítnout úkol.")
+        elif volba == "3":
+            print("\nDěkujeme za hraní! Vaše konečné skóre: {body} bodů.")
+            break
+        else:
+            print("\nNeplatná volba. Zkuste to znovu.")
+
+        print(f"Vaše aktuální skóre: {body} bodů.")
+
+if __name__ == "__main__":
     hlavni()
