@@ -1,0 +1,16 @@
+import random
+
+def modra_laguna():
+    print("Vítej na Modré laguně!")
+    volba = input("Chceš jít k jezírku, kde jsou ryby? (ano/ne): ").lower()
+
+    if volba == "ano":
+        print("Jdeš k jezírku, kde jsou ryby...")
+        vysledek = random.randint(1, 2)
+
+        if vysledek == 1:
+            print("Ryba úspěšně chycená!")
+        else:
+            print("Ryba uplavala, noobe!")
+    else:
+        print("Rozhodl(a) ses zůstat mimo jezírko. Možná příště!")
